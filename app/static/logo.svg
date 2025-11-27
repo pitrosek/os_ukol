@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Složitější logo - kombinace boxu a skladu -->
+  
+  <!-- Pozadí -->
+  <rect width="100" height="100" fill="#2c5aa0" rx="10"/>
+  
+  <!-- Vnější box -->
+  <rect x="15" y="30" width="70" height="40" fill="none" stroke="#fff" stroke-width="3" rx="5"/>
+  
+  <!-- Horní část boxu -->
+  <path d="M 25 30 L 50 15 L 75 30" fill="none" stroke="#fff" stroke-width="2.5"/>
+  
+  <!-- Třída box (vnitřní) -->
+  <rect x="25" y="40" width="20" height="25" fill="#ffc107" opacity="0.9" rx="2"/>
+  <rect x="55" y="40" width="20" height="25" fill="#4CAF50" opacity="0.9" rx="2"/>
+  
+  <!-- Čáry -->
+  <line x1="25" y1="50" x2="45" y2="50" stroke="#1e3a5f" stroke-width="1"/>
+  <line x1="55" y1="55" x2="75" y2="55" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Dolní text -->
+  <text x="50" y="85" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">SSŠV</text>
+</svg>

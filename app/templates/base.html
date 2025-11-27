@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Systém Správy Skladů a Výroby">
+    <meta name="theme-color" content="#2c5aa0">
+    
+    <title>{% block title %}Systém Správy Skladů a Výroby{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/bootstrap.min.css') }}">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/fontawesome/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/fontawesome/solid.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/fontawesome/brands.min.css') }}">
+    
+    <!-- AppBuilder CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/ab.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/themes/slate.css') }}">
+    
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/datepicker/bootstrap-datepicker.css') }}">
+    
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/select2/select2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/select2/select2-bootstrap-theme.css') }}">
+    
+    <!-- VLASTNÍ CSS - NEJDŮLEŽITĚJŠÍ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}" id="custom-style">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+    
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='appbuilder/js/jquery-latest.js') }}"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="{{ url_for('static', filename='appbuilder/js/bootstrap.min.js') }}"></script>
+    
+    <!-- Datepicker JS -->
+    <script src="{{ url_for('static', filename='appbuilder/datepicker/bootstrap-datepicker.js') }}"></script>
+    
+    <!-- Select2 JS -->
+    <script src="{{ url_for('static', filename='appbuilder/select2/select2.js') }}"></script>
+    
+    <!-- AppBuilder JS -->
+    <script src="{{ url_for('static', filename='appbuilder/js/ab.js') }}"></script>
+    
+    <script>
+        // Vlastní JavaScript pro přizpůsobení aplikace
+        document.addEventListener('DOMContentLoaded', function() {
+            // Odstranění FAB branding
+            var fabLogos = document.querySelectorAll('[class*="fab-logo"], [class*="appbuilder-logo"]');
+            fabLogos.forEach(function(element) {
+                element.style.display = 'none';
+            });
+            
+            // Přidání vlastního stylu do navbar-brand
+            var navbarBrand = document.querySelector('.navbar-brand');
+            if (navbarBrand) {
+                navbarBrand.textContent = '📦 SSŠV';
+                navbarBrand.style.fontSize = '22px';
+                navbarBrand.style.fontWeight = 'bold';
+            }
+        });
+    </script>
+    
+    {% block extra_tail %}{% endblock %}
+</body>
+</html>

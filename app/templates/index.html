@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Systém Správy Skladů a Výroby</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/ab.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/themes/slate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='appbuilder/css/fontawesome/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar-brand::before {
+            content: "📦 SSŠV" !important;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .jumbotron {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .jumbotron h1 {
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .jumbotron p {
+            font-size: 18px;
+            margin: 0;
+        }
+        
+        .feature-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 15px 0;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-box i {
+            font-size: 40px;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+        }
+        
+        .feature-box h3 {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+        
+        .welcome-container {
+            margin: 30px 0;
+        }
+        
+        .footer-custom {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Systém Správy Skladů a Výroby</h1>
+            <p>Profesionální řešení pro správu výrobků a skladových zásob</p>
+        </div>
+        
+        <div class="welcome-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <i class="fa fa-cube"></i>
+                        <h3>Správa Výrobků</h3>
+                        <p>Spravujte své výrobky s přehledným systémem evidencí a sériových čísel.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <i class="fa fa-warehouse"></i>
+                        <h3>Správa Skladů</h3>
+                        <p>Sledujte stav zásob, datumů a počet kusů na jednotlivých skladech.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <i class="fa fa-users"></i>
+                        <h3>Správa Kontaktů</h3>
+                        <p>Ведіть evidenci kontaktů se všemi relevantními informacemi.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <i class="fa fa-chart-bar"></i>
+                        <h3>Analýzy a Grafy</h3>
+                        <p>Zobrazujte statistiky a trendy v grafické podobě.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-custom">
+            <p><strong>Systém Správy Skladů a Výroby</strong></p>
+            <p>© 2025 Všechna práva vyhrazena. Vlastní řešení.</p>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='appbuilder/js/jquery-latest.js') }}"></script>
+    <script src="{{ url_for('static', filename='appbuilder/js/bootstrap.min.js') }}"></script>
+</body>
+</html>

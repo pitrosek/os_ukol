@@ -1,0 +1,99 @@
+/* Print CSS pro správné formátování tisku */
+@media print {
+    body {
+        background: white !important;
+    }
+    
+    .navbar,
+    .footer,
+    .sidebar,
+    .breadcrumb,
+    .pagination {
+        display: none !important;
+    }
+    
+    .table {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px solid #000 !important;
+        padding: 8px !important;
+    }
+    
+    .btn,
+    .form-control {
+        display: none !important;
+    }
+    
+    h1 {
+        page-break-after: avoid;
+        border-bottom: 1px solid #000 !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Tmavý režim - pokud bude potřeba */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .table,
+    .card,
+    .well {
+        background-color: #2a2a2a !important;
+        color: #e0e0e0;
+    }
+    
+    .table th {
+        background-color: #1e3a5f !important;
+    }
+    
+    .form-control {
+        background-color: #333 !important;
+        color: #e0e0e0 !important;
+        border-color: #555 !important;
+    }
+}
+
+/* Animace */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.page-content {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.card {
+    animation: slideIn 0.3s ease-out;
+}
